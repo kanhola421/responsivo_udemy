@@ -2,17 +2,20 @@
 
 *{
     font-family: sans-serif;
-    box-sizing: border-box;
-}
-
-body{
-    margin:0;
-    width:100vw;
-    height:100vh;
 }
 
 h1,h2,h3{
     font-family: 'Oxygen';
+}
+
+.clearfix::after, .row::after{
+    content:' ';
+    display: block;
+    clear:both;
+}
+
+body{
+    margin:0;
 }
 
 nav{
@@ -43,6 +46,7 @@ nav a:hover{
 .top__content{
     text-align:center;
     background:#f6f6f6;
+    padding:1em;
 }
 
 .top__content-title{
@@ -144,4 +148,94 @@ nav a:hover{
     font-size:1.1em;
     color:white;
     text-decoration: none;
+}
+
+@media screen and (min-width:48.75em){
+
+    header img{
+        float: left;
+    }
+    
+    header nav{
+        background:transparent;
+        float:right;
+        margin-top: 1em;
+    }
+
+    header nav ul{
+        padding: 0;
+        margin:0;
+    }
+
+    header li{
+        display: inline-block;
+    }
+
+    .top__content{
+        background:#521a66;
+        color:white;
+    }
+
+    .top__content-title{
+        margin-top:0;
+    }
+
+    .top__content-title, .top__content-subtitle{
+        color:white;
+    }
+
+    header nav a{
+        color:#713a84;
+    }
+
+    header nav a:hover{
+        background:#e7d9fc;
+    }
+
+    .button{
+        margin:10px 0 1em 0;
+    }
+
+    .middle__content article{
+        width:44%;
+        margin:3%;
+        float: left;
+    }
+
+    .last__content article .button{
+        float:right;
+    }
+}
+
+@media screen and (min-width:56.25em){
+    .top__content{
+        background-color:#521a66;
+        background-image:url(imagens/bg_topo_1198x670.jpg);
+        height:15em;
+        padding-top:15em;
+    }
+}
+
+
+@media screen and (min-width:64em){
+    .top__content{
+        background-image: url(imagens/bg_topo_1600x1374.jpg);
+        background-position: center top;
+        padding:19em 10em 10em;
+    }
+
+    .middle__content article{
+        width:23%;
+        margin:1%;
+    }
+
+    .last__content article{
+        width:48%;
+        margin:1%;
+        float:left;
+    }
+
+    .last__content article .button{
+        float:none;
+    }
 }
